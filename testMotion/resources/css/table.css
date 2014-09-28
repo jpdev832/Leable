@@ -1,0 +1,41 @@
+.tablecard {
+    border-radius: 10px;
+    box-shadow: -5px 5px 10px #555555;
+    margin: 5px;
+    width: 400px;
+    height: 600px;
+}
+
+.tablecard > .header {
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: #000000;
+    width: 400px;
+    height: 75px;
+}
+
+.headerText {
+    text-align: center;
+    font-size: x-large;
+    line-height: 75px;
+}
+
+.tablecard > .image {
+    background: #ffffff;
+    width: 400px;
+    height: 275px;
+}
+
+.tablecard > img {
+    width: 400px;
+    height: 275px;
+}
+
+.tablecard > .footer {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #000000;
+    width: 400px;
+    height: 250px;
+}
