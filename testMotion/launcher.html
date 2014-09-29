@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html manifest="" lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>testMotion</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+    var dataFromParent;
+    
+    $( document ).ready(function() {
+        console.log('returning focus: '+dataFromParent);
+        var goBack = window.open('', 'parent');
+        
+        window.open(dataFromParent, "", "fullscreen=1,top=0,left=0,location=0,menubar=0,status=0,titlebar=0,toolbar=0,width=100,height=100");
+        goBack.focus();
+        window.close();
+    });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

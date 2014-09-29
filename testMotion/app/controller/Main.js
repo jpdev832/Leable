@@ -7,7 +7,7 @@ Ext.define('testMotion.controller.Main', {
     
     config: {
         refs: {
-            mainView: 'mainView'    
+            mainView: 'mainView'
         },
         control: {
             
@@ -30,8 +30,11 @@ Ext.define('testMotion.controller.Main', {
             id: -1,
             position: [ 0, 0, 0 ]
         };
-        me.openUrl = function(url) {
-            window.open(url);
+        me.openUrl = function(url, name, specs) {
+            window.name = 'parent';
+            
+            var win = window.open('../launcher.html', name, specs);
+            win.dataFromParent = url;
         };
         
         var callback = function(frame) {
@@ -78,9 +81,8 @@ Ext.define('testMotion.controller.Main', {
     
     onUpSwipe: function() {
         console.log("swipe up");
-        debugger;
         var card = this.getMainView().getActiveItem();
-        this.openUrl(card.getData().url);
+        this.openUrl(card.getData().url, "_blank", "");//fullscreen=1,top=0,left=0,location=0,menubar=0,status=0,titlebar=0,toolbar=0
     },
     
     onDownSwipe: function() {

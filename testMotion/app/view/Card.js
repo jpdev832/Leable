@@ -13,6 +13,11 @@ Ext.define('testMotion.view.Card', {
                 ].join("")  
             }
         ],*/
-        tpl: '<div class="tablecard"><div class="header">{name}</div><div class="image"></div><div class="footer"></div></div>'
+        tpl: [
+            "<div class='tablecard'>",
+            "<div class='image'><img src='{image}' width='400' height='275' alt='{alt}' /></div>",
+            "<div class='footer'><p>{description}</p></div>",
+            "</div>"
+        ].join("") 
     }
 });
